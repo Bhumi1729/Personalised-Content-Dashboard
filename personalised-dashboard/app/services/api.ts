@@ -60,7 +60,7 @@ export const fetchTrendingNews = async (options: {
       `${NEWS_API_URL}/everything`,
       {
         params,
-        timeout: 10000,
+    timeout: 20000,
       }
     );
 
@@ -134,7 +134,7 @@ export const fetchNews = async (categories: string[]): Promise<NewsItem[]> => {
                 category,
                 pageSize: 100, // Get maximum available articles per category
               },
-              timeout: 10000,
+              timeout: 20000,
             }
           );
 
@@ -824,7 +824,7 @@ const fetchNewsSearch = async (query: string): Promise<NewsItem[]> => {
           pageSize: 5,
           sortBy: 'relevancy',
         },
-        timeout: 10000, // 10 second timeout
+  timeout: 20000, // 20 second timeout
       }
     );
 
@@ -872,7 +872,7 @@ const fetchFullMovieDetails = async (imdbID: string, title: string): Promise<Par
         apikey: OMDB_API_KEY,
         i: imdbID,
       },
-      timeout: 5000, // 5 second timeout
+  timeout: 20000, // 20 second timeout
     });
     
     if (idResponse.data.Response === 'True' && 
@@ -896,7 +896,7 @@ const fetchFullMovieDetails = async (imdbID: string, title: string): Promise<Par
           apikey: OMDB_API_KEY,
           t: title,
         },
-        timeout: 5000,
+  timeout: 20000,
       });
       
       if (titleResponse.data.Response === 'True') {
