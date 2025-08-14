@@ -1,0 +1,26 @@
+/* Theme colors - placed in a separate file to avoid conflicts */
+
+:root {
+  --theme-bg: #f0f0f0;
+}
+
+html.dark {
+  --theme-bg: #000000;
+}
+
+/* Applied globally */
+html {
+  background-color: var(--theme-bg) !important;
+}
+
+body {
+  background-color: var(--theme-bg) !important;
+}
+
+.dashboard-container {
+  background-color: var(--theme-bg) !important;
+}
+
+.dashboard-main {
+  background-color: var(--theme-bg) !important;
+}

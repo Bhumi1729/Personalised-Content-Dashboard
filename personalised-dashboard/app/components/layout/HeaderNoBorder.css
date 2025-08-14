@@ -1,0 +1,10 @@
+/* Force remove any border or shadow from the header in light mode */
+header {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.dark header {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid #374151 !important;
+}

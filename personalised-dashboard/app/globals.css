@@ -1,0 +1,292 @@
+/* Custom: Selected tab in dark mode */
+.dark .selected-tab-dark {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 10;
+}
+@import "tailwindcss";
+
+
+:root {
+  --background: #f0f0f0 !important; /* Slightly darker gray background */
+  --foreground: #171717 !important;
+  --card-bg: #ffffff !important; /* White cards for light theme */
+  --card-border: #e5e7eb !important; /* Light border for cards */
+  --input-bg: #ffffff !important;
+  --input-border: #d1d5db !important;
+  --primary: #2563eb !important;
+  --secondary: #f3f4f6 !important; /* Light shade for secondary elements */
+  --sidebar-bg: #ffffff !important; /* White sidebar */
+  --accent: #3b82f6 !important;
+  --muted: #6b7280 !important;
+}
+
+
+html.dark {
+  --background: #000000 !important; /* Pure black background */
+  --foreground: #f3f4f6 !important;
+  --card-bg: #1a1a1a !important; /* Lighter shade for cards - increased contrast */
+  --card-border: #2a2a2a !important; /* Slightly visible border */
+  --input-bg: #1a1a1a !important;
+  --input-border: #333 !important;
+  --primary: #2563eb !important;
+  --secondary: #1c1c1c !important; /* Lighter shade for secondary elements */
+  --sidebar-bg: #0a0a0a !important; /* Distinct darker shade for sidebar */
+  --accent: #fbbf24 !important;
+  --muted: #52525b !important;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+html.dark {
+  background-color: #000000;
+}
+
+body {
+  background-color: transparent !important;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Direct background color overrides */
+.light-theme-bg {
+  background-color: #f8f9fa !important;
+}
+
+.dark-theme-bg {
+  background-color: #000000 !important;
+}
+
+/* Tailwind utility overrides for dark mode */
+.dark .bg-white {
+  background-color: var(--card-bg) !important;
+}
+.dark .text-gray-800 {
+  color: var(--foreground) !important;
+}
+.dark .text-gray-900 {
+  color: var(--foreground) !important;
+}
+.dark .bg-gray-100 {
+  background-color: var(--secondary) !important;
+}
+.dark .bg-gray-50 {
+  background-color: var(--background) !important;
+}
+.dark .border-gray-100 {
+  border-color: #23232b !important;
+}
+.dark .border-gray-200 {
+  border-color: #2a2a2a !important;
+}
+
+/* Custom classes for dark mode */
+.dark .bg-sidebar-custom {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.bg-card-custom {
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--card-border);
+}
+
+.dark .bg-card-custom {
+  background-color: var(--card-bg) !important;
+  box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.3), 0 2px 6px -1px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+.dark .group:hover .bg-card-custom,
+.dark .bg-card-custom:hover {
+  background-color: #222222 !important;
+  border-color: #333333 !important;
+}
+
+/* Badge styles for dark mode */
+.dark span.backdrop-blur-sm {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Tab styling for dark mode */
+.dark .bg-white.shadow.text-blue-600 {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+/* Custom class for selected tabs */
+.selected-tab {
+  background-color: black !important;
+  color: white !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark .selected-tab {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Custom hover style for tabs */
+.tab-hover:hover {
+  background-color: #e5e7eb;
+  color: black !important;
+}
+
+.dark .tab-hover:hover {
+  background-color: #6b7280;
+  color: white !important;
+}
+
+/* Tab list background */
+.tab-list-bg {
+  background-color: #ffffff !important;
+}
+
+.dark .tab-list-bg {
+  background-color: #1f2937 !important;
+}
+
+/* Tab text color override */
+.text-gray-700 {
+  color: #000000 !important;
+}
+
+.dark .tab-hover:hover {
+  background-color: #4b5563 !important;
+  color: white !important;
+}
+
+.dark .text-gray-500 {
+  color: #a1a1aa !important;
+}
+.dark .text-gray-700 {
+  color: #d4d4d8 !important;
+}
+.dark .bg-blue-600 {
+  background-color: #2563eb !important;
+}
+.dark .hover\:bg-gray-100:hover {
+  background-color: #23232b !important;
+}
+.dark .hover\:bg-gray-800:hover {
+  background-color: #18181b !important;
+}
+.dark .bg-blue-900 {
+  background-color: #1e293b !important;
+}
+.dark .hover\:bg-blue-800:hover {
+  background-color: #2563eb !important;
+}
+.dark .text-white {
+  color: #f3f4f6 !important;
+}
+.dark .bg-yellow-100 {
+  background-color: #2d2d35 !important;
+}
+.dark .text-yellow-800 {
+  color: #fde68a !important;
+}
+.dark .bg-red-50 {
+  background-color: #2d2d35 !important;
+}
+.dark .border-red-200 {
+  border-color: #fde68a !important;
+}
+.dark .bg-yellow-50 {
+  background-color: #2d2d35 !important;
+}
+
+.dark .text-red-800 {
+  color: #fde68a !important;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Header icon hover effects */
+header button:hover svg {
+  color: white !important;
+}
+
+/* Force black icon color in light mode */
+html:not(.dark) header svg,
+html:not(.dark) header button svg {
+  color: #000000 !important; 
+}
+
+html:not(.dark) header button:hover svg {
+  color: white !important;
+}
+
+/* Special handling for theme toggle button */
+.theme-toggle-btn:hover .theme-icon-moon {
+  color: white !important;
+  fill: black !important;
+  stroke: white !important;
+}
+
+.theme-toggle-btn:hover .theme-icon-sun {
+  color: white !important;
+  fill: yellow !important;
+  stroke: white !important;
+}
+
+/* Layout button styles */
+.selected-layout-btn {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.unselected-layout-btn {
+  background-color: #6b7280 !important;
+  color: #ffffff !important;
+}
+
+html.dark .selected-layout-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html.dark .unselected-layout-btn {
+  background-color: #4b5563 !important;
+  color: #ffffff !important;
+}
+
+/* Completely remove header border and shadow in light mode */
+header {
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+html.dark header {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  border-bottom: 1px solid #2a2a2a !important;
+}
